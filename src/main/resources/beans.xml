@@ -6,16 +6,20 @@
 
 	<bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"/>
 	<bean class="com.epam.botor.processors.SayRiseBeanPostProcessor"/>
+	<bean class="java.lang.Runtime" factory-method="getRuntime" id="runtime" />
 	
 	<bean id="odanUrr" class="com.epam.botor.domain.Jedi">
 		<constructor-arg value="Odan urr" />
 		<constructor-arg value="MALE" />
+		<property name="bestFriend" ref="obi"/> 
 		<property name="lightsabre" ref="lightSabre"/>
 	</bean>
 
+	
 	<bean id="obi" class="com.epam.botor.domain.Jedi">
 		<constructor-arg value="Obi Van Kenobi" />
 		<constructor-arg value="MALE" />
+		<property name="bestFriend" ref="odanUrr"/> 
 		<property name="lightsabre" ref="lightSabre"/>
 	</bean>
 
@@ -29,7 +33,7 @@
 	<bean id="lightSabre" class="com.epam.botor.domain.LightSabre">
 		<constructor-arg value="Slicer" />
 		<constructor-arg value="10" />
-		<constructor-arg value="RED" />
+		<property name="color" value="RED" />
 	</bean>
 	
 	<bean id="odanUrrLightSabre" factory-bean="odanUrr" 

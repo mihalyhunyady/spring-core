@@ -38,6 +38,8 @@ public class App {
 			LOGGER.debug("" + context.getBean("obi"));
 			LOGGER.debug("" + context.getBean("mace"));
 			
+			LOGGER.debug("Total memory: " + context.getBean("runtime", Runtime.class).totalMemory());
+			
 		}
 	}
 }

@@ -10,17 +10,15 @@ public class LightSabre implements InitializingBean, DisposableBean {
 
 	private final String name;
 	private final int damage;
-	private final Color color;
+	private Color color;
 	
 	public LightSabre(String name, int damage) {
-		this(name, damage, null);
-	}
-
-	
-	public LightSabre(String name, int damage, Color color) {
-		super();
 		this.name = name;
 		this.damage = damage;
+	}
+
+
+	public void setColor(Color color) {
 		this.color = color;
 	}
 
