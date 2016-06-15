@@ -3,15 +3,18 @@ package com.epam.botor.domain;
 import java.beans.ConstructorProperties;
 
 public class Jedi extends Person {
-    private final LightSabre lightsabre;
+    private LightSabre lightsabre;
 
-    @ConstructorProperties( { "name", "gender", "lightSabre" })
-    public Jedi(String name, Gender gender, LightSabre lightSabre) {
+    @ConstructorProperties( { "name", "gender"})
+    public Jedi(String name, Gender gender) {
         super(name, gender);
-    	this.lightsabre = lightSabre;
     }
+    
+    public void setLightsabre(LightSabre lightsabre) {
+		this.lightsabre = lightsabre;
+	}
 
-    @Override
+	@Override
 	public String toString() {
 		return "Jedi [lightsabre=" + lightsabre + ", getName()=" + getName() + ", getGender()=" + getGender() + "]";
 	}
