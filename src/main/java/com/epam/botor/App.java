@@ -20,9 +20,12 @@ public class App {
 			System.out.println(jedi.getIdentityHashCode());
 			System.out.println(context.getBean("odanUrr", Jedi.class).getIdentityHashCode());
 		
-			Trooper trooper = context.getBean(Trooper.class);
+			Trooper trooper = context.getBean("trooper", Trooper.class);
 			System.out.println(trooper.getName() + ": " + trooper.getIdentityHashCode());
-			trooper = context.getBean(Trooper.class);
+			trooper = context.getBean("trooper", Trooper.class);
+			System.out.println(trooper.getName() + ": " + trooper.getIdentityHashCode());
+			
+			trooper = context.getBean("trooper2", Trooper.class);
 			System.out.println(trooper.getName() + ": " + trooper.getIdentityHashCode());
 			
 		}
