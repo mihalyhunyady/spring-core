@@ -18,5 +18,9 @@ public abstract class Person {
     public Gender getGender() {
         return gender;
     }
+    
+    public int getIdentityHashCode() {
+    	return System.identityHashCode(this);
+    }
 
 }

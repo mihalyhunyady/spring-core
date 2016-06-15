@@ -5,6 +5,8 @@
 	http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 	<bean id="odanUrr" class="com.epam.botor.domain.Jedi">
+		<constructor-arg value="Odan urr" />
+		<constructor-arg value="MALE" />
 		<constructor-arg ref="lightSabre" />
 	</bean>
 
@@ -12,5 +14,11 @@
 		<constructor-arg value="Slicer" />
 		<constructor-arg value="10" />
 	</bean>
-
+	
+	<bean id="trooper" class="com.epam.botor.domain.Trooper"
+		scope="prototype">
+		<constructor-arg value="No name trooper" />
+		<constructor-arg value="MALE" />
+	</bean>
+	
 </beans>

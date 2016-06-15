@@ -1,14 +1,16 @@
 package com.epam.botor.domain;
 
-public class Jedi {
+public class Jedi extends Person {
     private final LightSabre lightsabre;
 
-    public Jedi(LightSabre lightSabre) {
-        this.lightsabre = lightSabre;
+    public Jedi(String name, Gender gender, LightSabre lightSabre) {
+        super(name, gender);
+    	this.lightsabre = lightSabre;
     }
 
     public String fight() {
         return lightsabre.hit();
     }
+
 
 }
