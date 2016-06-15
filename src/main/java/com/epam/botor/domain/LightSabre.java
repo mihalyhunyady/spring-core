@@ -14,7 +14,4 @@ public class LightSabre {
 	public String hit() {
 		return "ZZzzzzzzzzzz";
 	}
-	
-	
-
 }

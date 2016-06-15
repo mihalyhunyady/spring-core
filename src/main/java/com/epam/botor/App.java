@@ -1,6 +1,7 @@
 package com.epam.botor;
 
 import com.epam.botor.domain.Jedi;
+import com.epam.botor.domain.LightSabre;
 
 /**
  * Start Wars App
@@ -8,7 +9,8 @@ import com.epam.botor.domain.Jedi;
  */
 public class App {
 	public static void main(String[] args) {
-		Jedi jedi = new Jedi();
+		LightSabre lightSabre = new LightSabre("Slicer", 10);
+		Jedi jedi = new Jedi(lightSabre);
 		System.out.println(jedi.fight());
 	}
 }

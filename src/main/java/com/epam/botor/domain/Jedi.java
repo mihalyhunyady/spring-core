@@ -3,8 +3,8 @@ package com.epam.botor.domain;
 public class Jedi {
     private final LightSabre lightsabre;
 
-    public Jedi() {
-        lightsabre = new LightSabre("Slicer", 10);
+    public Jedi(LightSabre lightSabre) {
+        this.lightsabre = lightSabre;
     }
 
     public String fight() {
