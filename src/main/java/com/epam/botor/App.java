@@ -4,7 +4,6 @@ import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.epam.botor.domain.Jedi;
-import com.epam.botor.domain.LightSabre;
 import com.epam.botor.domain.Trooper;
 
 /**

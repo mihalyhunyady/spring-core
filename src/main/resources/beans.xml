@@ -2,8 +2,10 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans 
-	http://www.springframework.org/schema/beans/spring-beans.xsd">
+	http://www.springframework.org/schema/beans/spring-beans.xsd" default-init-method="init" default-destroy-method="destroy2">
 
+	<bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"/>
+	
 	<bean id="odanUrr" class="com.epam.botor.domain.Jedi">
 		<constructor-arg value="Odan urr" />
 		<constructor-arg value="MALE" />
@@ -16,7 +18,7 @@
 	</bean>
 	
 	<bean id="odanUrrLightSabre" factory-bean="odanUrr" 
-			factory-method="createLightSabre">
+			factory-method="createLightSabre" >
 		<constructor-arg value="Slicer" />
 	</bean>
 	
