@@ -32,6 +32,7 @@ public class LightSabre implements InitializingBean, DisposableBean {
 		
 	}
 	
+	@PostConstruct
 	public void init() {
 		System.out.println("init()");
 	}
@@ -47,10 +48,10 @@ public class LightSabre implements InitializingBean, DisposableBean {
 		
 	}
 	
-	@PostConstruct
-	public void postConstruct() {
-		System.out.println("postConstruct()");
-	}
+//	@PostConstruct
+//	public void postConstruct() {
+//		System.out.println("postConstruct()");
+//	}
 	
 	@PreDestroy
 	public void preDestroy() {

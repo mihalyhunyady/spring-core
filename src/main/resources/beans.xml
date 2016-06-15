@@ -5,6 +5,7 @@
 	http://www.springframework.org/schema/beans/spring-beans.xsd" default-init-method="init" default-destroy-method="destroy2">
 
 	<bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"/>
+	<bean class="com.epam.botor.processors.SayRiseBeanPostProcessor"/>
 	
 	<bean id="odanUrr" class="com.epam.botor.domain.Jedi">
 		<constructor-arg value="Odan urr" />
