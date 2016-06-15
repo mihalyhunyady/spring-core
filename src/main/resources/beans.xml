@@ -9,9 +9,23 @@
 	
 	<bean id="odanUrr" class="com.epam.botor.domain.Jedi">
 		<constructor-arg value="Odan urr" />
+		<constructor-arg type="com.epam.botor.domain.LightSabre" ref="lightSabre" />
 		<constructor-arg value="MALE" />
-		<constructor-arg ref="lightSabre" />
 	</bean>
+
+	<bean id="obi" class="com.epam.botor.domain.Jedi">
+		<constructor-arg value="Obi Van Kenobi" />
+		<constructor-arg index="2" ref="lightSabre" />
+		<constructor-arg value="MALE" />
+	</bean>
+
+	<bean id="mace" class="com.epam.botor.domain.Jedi">
+		<constructor-arg value="Mace" />
+		<constructor-arg name="lightSabre" ref="lightSabre" />
+		<constructor-arg value="MALE" />
+	</bean>
+
+
 
 	<bean id="lightSabre" class="com.epam.botor.domain.LightSabre">
 		<constructor-arg value="Slicer" />

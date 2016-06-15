@@ -34,6 +34,10 @@ public class App {
 			LOGGER.debug(trooper.getName() + ": " + trooper.getIdentityHashCode());
 		
 			LOGGER.debug("" + context.getBean("odanUrrLightSabre"));
+			
+			LOGGER.debug("" + context.getBean("obi"));
+			LOGGER.debug("" + context.getBean("mace"));
+			
 		}
 	}
 }
