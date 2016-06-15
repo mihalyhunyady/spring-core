@@ -12,5 +12,7 @@ public class Jedi extends Person {
         return lightsabre.hit();
     }
 
-
+    public LightSabre createLightSabre(String name) {
+    	return new LightSabre(getName() + " - " + name, 100);
+    }
 }

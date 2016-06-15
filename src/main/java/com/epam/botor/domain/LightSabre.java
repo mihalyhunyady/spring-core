@@ -14,4 +14,11 @@ public class LightSabre {
 	public String hit() {
 		return "ZZzzzzzzzzzz";
 	}
+
+	@Override
+	public String toString() {
+		return "LightSabre [name=" + name + ", damage=" + damage + "]";
+	}
+	
+	
 }

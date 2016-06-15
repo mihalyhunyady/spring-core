@@ -4,6 +4,7 @@ import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.epam.botor.domain.Jedi;
+import com.epam.botor.domain.LightSabre;
 import com.epam.botor.domain.Trooper;
 
 /**
@@ -27,7 +28,8 @@ public class App {
 			
 			trooper = context.getBean("trooper2", Trooper.class);
 			System.out.println(trooper.getName() + ": " + trooper.getIdentityHashCode());
-			
+		
+			System.out.println(context.getBean("odanUrrLightSabre"));
 		}
 	}
 }
