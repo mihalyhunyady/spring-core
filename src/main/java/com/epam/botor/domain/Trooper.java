@@ -16,5 +16,12 @@ public class Trooper extends Person {
 	public static Trooper maleTrooperFactory(String name) {
 		return new Trooper(name, Gender.MALE);
 	}
+
+	@Override
+	public String fight() {
+		return "Trooper fighting";
+	}
+	
+	
 	
 }

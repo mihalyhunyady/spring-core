@@ -28,6 +28,7 @@ public class Jedi extends Person {
 		return "Jedi [lightsabre=" + lightsabre + ", bestFriend=" + (bestFriend == null ? "none" : bestFriend.getName()) + ", getName()=" + getName() + "]";
 	}
 
+	@Override
 	public String fight() {
         return lightsabre.hit();
     }

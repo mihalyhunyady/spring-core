@@ -22,5 +22,7 @@ public abstract class Person {
     public int getIdentityHashCode() {
     	return System.identityHashCode(this);
     }
+    
+    public abstract String fight();
 
 }
