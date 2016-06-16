@@ -28,7 +28,6 @@ public class App {
 			LOGGER.debug(jedi.fight());
 			
 			LOGGER.debug("" + jedi.getIdentityHashCode());
-			LOGGER.debug("" + context.getBean("odanUrr", Jedi.class).getIdentityHashCode());
 		
 			Trooper trooper = context.getBean("trooper", Trooper.class);
 			LOGGER.debug(trooper.getName() + ": " + trooper.getIdentityHashCode());
@@ -50,6 +49,7 @@ public class App {
 			LOGGER.debug("" + (fighters.get(0) == fighters.get(1)));
 			
 			LOGGER.debug("" + context.getBean("trooper3"));
+			LOGGER.debug("" + context.getBean("odanUrr", Jedi.class));
 		}
 	}
 }
