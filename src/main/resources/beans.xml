@@ -32,13 +32,14 @@
 
 	<bean id="odanUrr" class="com.epam.botor.domain.Jedi"
 		c:name="Odan urr" c:gender="MALE" p:bestFriend-ref="obi" p:lightsabre-ref="lightSabre"/>
-
+	
 
 	<bean id="obi" class="com.epam.botor.domain.Jedi">
 		<constructor-arg value="   Obi Van Kenobi   " />
 		<constructor-arg value="MALE" />
 		<property name="bestFriend" ref="odanUrr" />
 		<property name="lightsabre" value="Obi's private light sabre, 100" />
+		<property name="lightsabre.color" value="RED"/>
 	</bean>
 
 	<bean id="mace" class="com.epam.botor.domain.Jedi">

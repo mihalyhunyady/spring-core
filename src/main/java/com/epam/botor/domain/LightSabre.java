@@ -25,6 +25,13 @@ public class LightSabre implements InitializingBean, DisposableBean {
 	}
 
 
+
+
+	public Color getColor() {
+		return color;
+	}
+
+
 	public String hit() {
 		return "ZZzzzzzzzzzz";
 	}

@@ -2,7 +2,7 @@ package com.epam.botor.domain;
 
 public abstract class Person {
 
-    private final String name;
+    private String name;
     private final Gender gender;
 
     public Person(final String name, final Gender gender) {
@@ -15,7 +15,11 @@ public abstract class Person {
         return name;
     }
 
-    public Gender getGender() {
+    public void setName(String name) {
+		this.name = name;
+	}
+
+	public Gender getGender() {
         return gender;
     }
     

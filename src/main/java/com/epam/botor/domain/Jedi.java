@@ -11,6 +11,7 @@ public class Jedi extends Person {
     public Jedi(String name, Gender gender) {
     	super(name, gender);
     	this.bestFriend = null;
+    	this.lightsabre = new LightSabre("", 0);
     }
     
     public void setBestFriend(Jedi bestFriend) {
@@ -18,10 +19,18 @@ public class Jedi extends Person {
 	}
 
     
-    public void setLightsabre(LightSabre lightsabre) {
+    public Jedi getBestFriend() {
+		return bestFriend;
+	}
+
+	public void setLightsabre(LightSabre lightsabre) {
 		this.lightsabre = lightsabre;
 	}
 
+
+	public LightSabre getLightsabre() {
+		return lightsabre;
+	}
 
 	@Override
 	public String toString() {

@@ -42,7 +42,6 @@ public class App {
 			LOGGER.debug("" + context.getBean("mace"));
 			
 			LOGGER.debug("Total memory: " + context.getBean("runtime", Runtime.class).totalMemory());
-			LOGGER.debug("" + context.getBean("obi"));
 			LOGGER.debug("" + context.getBean("johan"));
 			List<Person> fighters = context.getBean("lightArmy", Army.class).getFighters();
 			LOGGER.debug("" + fighters + " " + fighters.getClass());
@@ -53,6 +52,7 @@ public class App {
 			
 			LOGGER.debug("" + context.getBean("defaultLightSabre"));
 			LOGGER.debug("" + context.getBean("ageOfTrooper3"));
+			LOGGER.debug("" + context.getBean("obi"));
 		}
 	}
 }
