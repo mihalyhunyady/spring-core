@@ -20,7 +20,7 @@
 		<constructor-arg value="Obi Van Kenobi" />
 		<constructor-arg value="MALE" />
 		<property name="bestFriend" ref="odanUrr"/> 
-		<property name="lightsabre" ref="lightSabre"/>
+		<property name="lightsabre" value="Obi's private light sabre, 100"/>
 	</bean>
 
 	<bean id="mace" class="com.epam.botor.domain.Jedi">
