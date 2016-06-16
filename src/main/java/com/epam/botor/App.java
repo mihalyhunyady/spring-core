@@ -8,6 +8,7 @@ import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.epam.botor.domain.Army;
+import com.epam.botor.domain.BlasterPistol;
 import com.epam.botor.domain.FighterType;
 import com.epam.botor.domain.Jedi;
 import com.epam.botor.domain.Person;
@@ -53,6 +54,10 @@ public class App {
 			LOGGER.debug("" + context.getBean("defaultLightSabre"));
 			LOGGER.debug("" + context.getBean("ageOfTrooper3"));
 			LOGGER.debug("" + context.getBean("obi"));
+			
+			LOGGER.debug("" + context.getBean(BlasterPistol.class));
+			LOGGER.debug("" + context.getBean(BlasterPistol.class));
+			LOGGER.debug("" + context.getBean(BlasterPistol.class));
 		}
 	}
 }

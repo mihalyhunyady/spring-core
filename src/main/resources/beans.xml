@@ -116,6 +116,11 @@
 		<constructor-arg value="No name trooper 2" />
 	</bean>
 
+	<bean class="com.epam.botor.domain.BlasterPistol" scope="prototype">
+		<constructor-arg value="My pistol"/>
+		<constructor-arg value="#{ T(java.lang.Math).random() * 100.0 }"/>
+	</bean>
+	
 	<util:constant static-field="com.epam.botor.domain.LightSabre.DEFAULT_DAMAGE" id="defaultDamage"/>
 	<util:property-path path="trooper3.age" id="ageOfTrooper3"/>
 </beans>
