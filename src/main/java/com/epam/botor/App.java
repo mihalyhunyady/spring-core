@@ -40,7 +40,6 @@ public class App {
 		
 			LOGGER.debug("" + context.getBean("odanUrrLightSabre"));
 			
-			LOGGER.debug("" + context.getBean("mace"));
 			
 			LOGGER.debug("Total memory: " + context.getBean("runtime", Runtime.class).totalMemory());
 			LOGGER.debug("" + context.getBean("johan"));
@@ -58,6 +57,8 @@ public class App {
 			LOGGER.debug("" + context.getBean(BlasterPistol.class));
 			LOGGER.debug("" + context.getBean(BlasterPistol.class));
 			LOGGER.debug("" + context.getBean(BlasterPistol.class));
+			LOGGER.debug("" + context.getBean("mace"));
+			LOGGER.debug("" + context.getBean("lightArmy"));
 		}
 	}
 }

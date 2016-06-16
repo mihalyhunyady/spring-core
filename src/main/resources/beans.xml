@@ -21,28 +21,26 @@
 		</property>
 	</bean>
 
-	<bean id="conversionService" class="org.springframework.context.support.ConversionServiceFactoryBean">
-		<property name="converters">
-			<list>
-				<bean class="com.epam.botor.converters.LightSabreConverter" />
-			</list>
-		</property>
-	</bean>
+	<bean id="conversionService" class="org.springframework.context.support.ConversionServiceFactoryBean" autowire="byName"/>
+	
+	<util:list id="converters">
+		<bean class="com.epam.botor.converters.LightSabreConverter" />
+	</util:list>
 
+	
 
 	<bean id="odanUrr" class="com.epam.botor.domain.Jedi"
 		c:name="Odan urr" c:gender="MALE" p:bestFriend-ref="obi" p:lightsabre-ref="lightSabre"/>
 	
 
-	<bean id="obi" class="com.epam.botor.domain.Jedi">
+	<bean id="obi" class="com.epam.botor.domain.Jedi" primary="true">
 		<constructor-arg value="   Obi Van Kenobi   " />
 		<constructor-arg value="MALE" />
 		<property name="bestFriend" ref="odanUrr" />
 		<property name="lightsabre" value="Obi's private light sabre, 100" />
-		<property name="lightsabre.color" value="RED"/>
 	</bean>
 
-	<bean id="mace" class="com.epam.botor.domain.Jedi">
+	<bean id="mace" class="com.epam.botor.domain.Jedi" autowire="byType">
 		<constructor-arg value="Mace" />
 		<constructor-arg value="MALE" />
 	</bean>
@@ -59,7 +57,7 @@
 		</property>
 	</bean>
 
-	<bean id="lightSabre" class="com.epam.botor.domain.LightSabre">
+	<bean id="lightSabre" class="com.epam.botor.domain.LightSabre" autowire-candidate="false">
 		<constructor-arg value="Slicer" />
 		<constructor-arg value="10" />
 		<property name="color" value="RED" />
@@ -73,19 +71,18 @@
 	
 	
 	<bean id="odanUrrLightSabre" factory-bean="odanUrr"
-		factory-method="createLightSabre">
+		factory-method="createLightSabre" autowire-candidate="false">
 		<constructor-arg value="Slicer" />
 	</bean>
 
-	<bean class="com.epam.botor.domain.Army" id="lightArmy">
-		<constructor-arg name="leader">
-			<bean class="com.epam.botor.domain.Jedi">
-				<constructor-arg value="Jar Jar"/>
-				<constructor-arg value="MALE"/>
-			</bean>
-		</constructor-arg>
-		<constructor-arg name="fighters" ref="lightTroopers"/>
+	<bean class="com.epam.botor.domain.Army" id="lightArmy" autowire="constructor">
+<!-- 		<constructor-arg name="fighters" ref="lightTroopers"/> -->
 	</bean>
+
+	<bean class="com.epam.botor.domain.Army" id="darkArmy" autowire="byName">
+<!-- 		<constructor-arg name="fighters" ref="lightTroopers"/> -->
+	</bean>
+
 	
 	<util:list id="lightTroopers" list-class="java.util.concurrent.CopyOnWriteArrayList">
 		<ref bean="trooper"/>

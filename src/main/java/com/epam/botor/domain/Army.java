@@ -13,6 +13,7 @@ public class Army {
         this.fighters = fighters;
     }
 
+    
     public Person getLeader() {
         return leader;
     }
