@@ -50,6 +50,9 @@ public class App {
 			
 			LOGGER.debug("" + context.getBean("trooper3"));
 			LOGGER.debug("" + context.getBean("odanUrr", Jedi.class));
+			
+			LOGGER.debug("" + context.getBean("defaultLightSabre"));
+			LOGGER.debug("" + context.getBean("ageOfTrooper3"));
 		}
 	}
 }

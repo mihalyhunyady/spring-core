@@ -7,7 +7,9 @@ import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
 
 public class LightSabre implements InitializingBean, DisposableBean {
-
+	public static final int DEFAULT_DAMAGE = 30;
+	
+	
 	private final String name;
 	private final int damage;
 	private Color color;
