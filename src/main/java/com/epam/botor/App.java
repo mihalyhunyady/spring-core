@@ -1,11 +1,16 @@
 package com.epam.botor;
 
+import java.util.List;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import com.epam.botor.domain.Army;
+import com.epam.botor.domain.FighterType;
 import com.epam.botor.domain.Jedi;
+import com.epam.botor.domain.Person;
 import com.epam.botor.domain.Trooper;
 
 /**
@@ -40,7 +45,9 @@ public class App {
 			LOGGER.debug("Total memory: " + context.getBean("runtime", Runtime.class).totalMemory());
 			LOGGER.debug("" + context.getBean("obi"));
 			LOGGER.debug("" + context.getBean("johan"));
-			LOGGER.debug("" + context.getBean("lightArmy"));
+			List<Person> fighters = context.getBean("lightArmy", Army.class).getFighters();
+			LOGGER.debug("" + fighters);
+			LOGGER.debug("" + (fighters.get(0) == fighters.get(1)));
 		}
 	}
 }

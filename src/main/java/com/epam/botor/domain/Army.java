@@ -1,13 +1,13 @@
 package com.epam.botor.domain;
 
-import java.util.Set;
+import java.util.List;
 
 public class Army {
 
     private final Person leader;
-    private final Set<Person> fighters;
+    private final List<Person> fighters;
 
-    public Army(final Person leader, final Set<Person> fighters) {
+    public Army(final Person leader, final List<Person> fighters) {
         super();
         this.leader = leader;
         this.fighters = fighters;
@@ -17,7 +17,7 @@ public class Army {
         return leader;
     }
 
-    public Set<Person> getFighters() {
+    public List<Person> getFighters() {
         return fighters;
     }
 
