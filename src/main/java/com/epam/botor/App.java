@@ -39,6 +39,7 @@ public class App {
 			
 			LOGGER.debug("Total memory: " + context.getBean("runtime", Runtime.class).totalMemory());
 			LOGGER.debug("" + context.getBean("obi"));
+			LOGGER.debug("" + context.getBean("johan"));
 			
 		}
 	}

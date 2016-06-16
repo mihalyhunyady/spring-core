@@ -48,6 +48,16 @@
 	</bean>
 
 
+	<bean id="johan" class="com.epam.botor.domain.Jedi">
+		<constructor-arg value="johan"/>
+		<constructor-arg value="MALE"/>
+		<property name="lightsabre">
+			<bean class="com.epam.botor.domain.LightSabre">
+				<constructor-arg value="DarkLighter"/>
+				<constructor-arg value="30"/>
+			</bean>
+		</property>
+	</bean>
 
 	<bean id="lightSabre" class="com.epam.botor.domain.LightSabre">
 		<constructor-arg value="Slicer" />
