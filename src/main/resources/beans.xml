@@ -2,25 +2,37 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans 
-	http://www.springframework.org/schema/beans/spring-beans.xsd" default-init-method="init" default-destroy-method="destroy2">
+	http://www.springframework.org/schema/beans/spring-beans.xsd"
+	default-init-method="init" default-destroy-method="destroy2">
 
-	<bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"/>
-	<bean class="com.epam.botor.processors.SayRiseBeanPostProcessor"/>
+	<bean
+		class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor" />
+	<bean class="com.epam.botor.processors.SayRiseBeanPostProcessor" />
 	<bean class="java.lang.Runtime" factory-method="getRuntime" id="runtime" />
-	
+
+	<bean class="org.springframework.beans.factory.config.CustomEditorConfigurer">
+		<property name="customEditors">
+			<map>
+				<entry key="com.epam.botor.domain.LightSabre" value="com.epam.botor.propertyeditor.LightSabreEditor" />
+			</map>
+		</property>
+	</bean>
+
+
+
 	<bean id="odanUrr" class="com.epam.botor.domain.Jedi">
 		<constructor-arg value="Odan urr" />
 		<constructor-arg value="MALE" />
-		<property name="bestFriend" ref="obi"/> 
-		<property name="lightsabre" ref="lightSabre"/>
+		<property name="bestFriend" ref="obi" />
+		<property name="lightsabre" ref="lightSabre" />
 	</bean>
 
-	
+
 	<bean id="obi" class="com.epam.botor.domain.Jedi">
 		<constructor-arg value="Obi Van Kenobi" />
 		<constructor-arg value="MALE" />
-		<property name="bestFriend" ref="odanUrr"/> 
-		<property name="lightsabre" value="Obi's private light sabre, 100"/>
+		<property name="bestFriend" ref="odanUrr" />
+		<property name="lightsabre" value="Obi's private light sabre, 100" />
 	</bean>
 
 	<bean id="mace" class="com.epam.botor.domain.Jedi">
@@ -35,21 +47,20 @@
 		<constructor-arg value="10" />
 		<property name="color" value="RED" />
 	</bean>
-	
-	<bean id="odanUrrLightSabre" factory-bean="odanUrr" 
-			factory-method="createLightSabre" >
+
+	<bean id="odanUrrLightSabre" factory-bean="odanUrr"
+		factory-method="createLightSabre">
 		<constructor-arg value="Slicer" />
 	</bean>
-	
-	<bean id="trooper" class="com.epam.botor.domain.Trooper"
-		scope="prototype">
+
+	<bean id="trooper" class="com.epam.botor.domain.Trooper" scope="prototype">
 		<constructor-arg value="No name trooper" />
 		<constructor-arg value="MALE" />
 	</bean>
-	
-	<bean id="trooper2" class="com.epam.botor.domain.Trooper" 
+
+	<bean id="trooper2" class="com.epam.botor.domain.Trooper"
 		factory-method="maleTrooperFactory" scope="prototype">
 		<constructor-arg value="No name trooper 2" />
 	</bean>
-	
+
 </beans>
