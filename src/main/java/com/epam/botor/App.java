@@ -46,8 +46,10 @@ public class App {
 			LOGGER.debug("" + context.getBean("obi"));
 			LOGGER.debug("" + context.getBean("johan"));
 			List<Person> fighters = context.getBean("lightArmy", Army.class).getFighters();
-			LOGGER.debug("" + fighters);
+			LOGGER.debug("" + fighters + " " + fighters.getClass());
 			LOGGER.debug("" + (fighters.get(0) == fighters.get(1)));
+			
+			LOGGER.debug("" + context.getBean("trooper3"));
 		}
 	}
 }
